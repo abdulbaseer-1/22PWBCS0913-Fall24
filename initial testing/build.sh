@@ -1,1 +1,0 @@
-g++ ./src/*.cpp -Iinclude -Llib -o ./bin/output -lmingw32 -lSDL2main -lSDL2
