@@ -1,0 +1,281 @@
+:root{
+    background-color: gainsboro;
+    font-size: 16px;
+}
+
+*{ /*general element style*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:4vw;
+}
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:3vw;;
+}
+h4{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:2vw;
+}
+h5{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:1.5vw;
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-size: 1.5vw;
+}
+a{
+    text-decoration: inherit;
+    color: inherit;
+}
+a:hover{
+    transform: scale(1.1);
+}
+@media screen and (max-width : 720px){
+    p{
+        font-size: 2.3vw;
+    }
+    h4{
+        font-size: 2.8vw;
+    }
+    h5{
+        font-size: 2vw;
+    }
+}
+
+
+a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    font-size: medium;
+}
+
+
+header{
+    position: relative;
+    text-align: center;
+    border-bottom: 5px solid red;
+}
+#logo{
+    position: absolute;
+    width: 14%;
+    top:-11.5%;
+    left:-0.25%;
+}
+#logo:hover{ /*this is a hover function studied in class it can be applied to any element*/
+    transform: scale(1.1); /*zoom in on hover*/
+    transition-duration: 200ms;
+}
+#login{
+    position: absolute;
+    top:10%;
+    right:3.5%;
+    width: 6%;
+}
+#login:hover{
+    transform: scale(1.1);
+    transition-duration: 200ms;
+}
+#insta-icon{
+    position: absolute;
+    top: 43%;
+    right: 1.5%;
+    width: 10%;
+    border-radius: 20%;
+}
+#insta-icon:hover{
+    transform: scale(1.1);
+    transition-duration: 200ms;
+}
+
+
+#navigation{
+    position: absolute;
+    top: 11.6vw;
+    left: 50%; /*The issue i was facing i.e: non dynamic flex was because
+               i had mentioned left:28% so it was alway applied and interfering with my flex*/
+    width: fit-content; /*also not mentioning left or right also interferes, WHY?*/
+     transform: translateX(-50%); /*/ used for centering and found it very useful but not in current slides */
+    padding: 0.1vw;
+    margin: 0.5vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#navigation a{
+    color: black;
+    text-decoration: none;
+    font-size: 2vw;
+    padding: 0.2vw;
+    margin: 0.6vw;
+}
+#navigation a:hover{
+    color: ghostwhite;
+}
+
+
+#landing-content{
+    position:relative;
+    text-align: center;
+    align-content: center;
+    margin-bottom: 10%;
+}
+#landing-content>p{
+    position:absolute;
+    color:azure;
+    top: 35%;
+    left:15%;
+    max-width: 30%;
+}
+
+
+#Workouts{
+    text-align: center;
+    align-content: center; 
+    margin-bottom: 10%; 
+}
+#workout-content-thumbnails{
+    display:grid;
+    place-items: center; /* Center both horizontally and vertically*/
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-template-rows: repeat(2,minmax(auto,1fr));
+    grid-auto-rows: minmax(250px,1fr);
+    gap: 3vw;
+    width: fit-content;
+    margin-top: 5%;
+}
+/* #workout-content-thumbnails>div{
+    overflow: hidden;Ensures any overflow is hidden (but is hiding the scaling anim)
+} */
+#workout-content-thumbnails>div>a>img{
+    border: 1px solid transparent;
+    border-radius: 10%;
+    width: 100%;
+    height: 100%;
+    height: auto;
+    object-fit: cover;  /* Crop images to fit without distortion*/
+}
+#workout-content-thumbnails>div>a>img:hover{
+    transform: scale(1.1);
+    transition: 250ms; /*learned by chance but awsome trick*/
+}
+#workout-thumbnail{
+    position: relative;
+}
+#workout-thumbnail > h4 > a{
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    /*transform function will give us a better centering*/
+    transform: translate(-50%, -50%); /* Center using transform (learned from chatgpt)*/
+    color: azure;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+
+#Health-tips{
+    text-align: center;
+    align-content: center;
+    margin-bottom: 10%; 
+}
+#tips-content{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows:1fr 1fr;
+    gap: 2vw;
+    padding: 2vw;
+    place-items: center;
+    margin-top: 5%;
+}
+#tips-content > div > a > img{
+    border-radius: 5%;
+    height: 90%;
+}
+#tips-content > div > a > img:hover{
+    transform: scale(1.15);
+    transition: 250ms;
+}
+
+
+
+#Results {
+    text-align: center;
+    margin-bottom: 10%;
+}
+#result-content{
+    display: grid;
+    gap: 1vw;
+    grid-template-columns: 4fr 4fr; /*//grid auto rows was causing the narrow grid row issue*/
+    margin-top: 5%;
+    place-items: center;
+}
+#result-2>img{
+    width: 100%;
+}
+
+
+#Contact {
+    border-top: 30px solid black; 
+    width: 100%;
+    margin: 0 auto; /* Centers the #Contact container horizontally // very important only thing missing and was causing errors*/
+    text-align: center;
+    background-color: darkgray;
+
+}
+#to_center{
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+}
+#contact_grid{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-template-rows: repeat(3, minmax(100px, 1fr));
+    place-items: center;
+
+    grid-template-areas: 
+    "s a"
+    "s b"
+    "s c";
+}
+#contact_grid > div{
+    padding: 2%;
+}
+#website_summary {
+    grid-area: s;
+    max-width: 100%;
+}
+
+#contact_1 {
+    grid-area: a;
+}
+
+#contact_2 {
+    grid-area: b;
+}
+#contact_3 > a > img{
+    grid-area: c;
+}
+
+#contact_1 > a > img{
+    width: 15%;
+}
+#contact_2> a > img {
+    width: 15%;
+}
+#contact_3> a > img {
+    width: 10%;
+}
