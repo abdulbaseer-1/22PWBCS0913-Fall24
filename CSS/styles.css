@@ -10,8 +10,8 @@
 }
 
 h1{
-    font-family: 'Times New Roman', Times, serif;
-    font-size:4vw;
+    font-size: 7.5vw;
+    font-family:'Times New Roman', Times, serif;
 }
 h2{
     font-family: 'Times New Roman', Times, serif;
@@ -64,7 +64,7 @@ header{
     border-bottom: 5.5px solid red;
 }
 #banner{
-        vertical-align: bottom; /*to neglect the whitespace on the bottom of the image*/
+    vertical-align: bottom; /*to neglect the whitespace on the bottom of the image*/
 }
 #logo{
     position: absolute;
@@ -86,14 +86,13 @@ header{
     transform: scale(1.1);
     transition-duration: 200ms;
 }
-#insta-icon{
+#linkedin-icon{
     position: absolute;
-    top: 43%;
-    right: 1.5%;
-    width: 10%;
-    border-radius: 20%;
+    top: 55%;
+    right: 3.2%;
+    width: 6%;
 }
-#insta-icon:hover{
+#linkedin-icon:hover{
     transform: scale(1.1);
     transition-duration: 200ms;
 }
@@ -105,7 +104,7 @@ header{
     left: 50%; /*The issue i was facing i.e: non dynamic flex was because
                i had mentioned left:28% so it was alway applied and interfering with my flex*/
     width: fit-content; /*also not mentioning left or right also interferes, WHY?*/
-     transform: translateX(-50%); /*/ used for centering and found it very useful but not in current slides */
+    transform: translateX(-50%); /*/ used for centering and found it very useful but not in current slides */
     margin: 0.5vw;
 
     display: flex;
@@ -151,7 +150,7 @@ header{
     align-items: center; /*vertical allignment*/
 }
 #workout-header{
-    font-size: 8vw;
+    font-size: 8vw !important;
     font-family:'Times New Roman', Times, serif;
     width: 50%;
 }
@@ -165,6 +164,11 @@ header{
     max-width: 1000px;
     margin-top: 3%;
     /*margin: 0 auto; normally used in centering problems for grids and flex but im okay here*/
+}
+@media screen and (max-width : 720px) {
+    #workout-content-thumbnails{
+        grid-template-columns: repeat(2 ,minmax(100px,1fr));
+        }
 }
 /* #workout-content-thumbnails>div{
     overflow: hidden;Ensures any overflow is hidden (but is hiding the scaling anim)
@@ -201,7 +205,7 @@ header{
 #Health-tips{
     text-align: center;
     align-content: center;
-    margin-bottom: 5%; 
+    margin-bottom: 10%; 
 }
 #health-tips-header-container{
     text-align: center;
@@ -210,23 +214,28 @@ header{
     align-items: center; /*vertical allignment*/
 }
 #health-tips-header{
-    font-size: 7.5vw;
+    font-size: 7.5vw !important;
     font-family:'Times New Roman', Times, serif;
 }
 #tips-content{
+    border-bottom: 3px solid black;
+}
+#tips-content > div{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows:1fr 1fr;
     gap: 3vw;
     padding: 6vw;
     place-items: center;
     margin-top: 4%;
 }
-#tips-content > div > a > img{
+#tips-content > div{
+    border-top: 3px solid black;
+}
+#tips-content > div > div > a > img{
     border-radius: 5%;
     height: 90%;
 }
-#tips-content > div > a > img:hover{
+#tips-content > div > div > a > img:hover{
     transform: scale(1.15);
     transition: 250ms;
 }
@@ -243,7 +252,7 @@ header{
     justify-content: center;/*horizontal allignment*/
 }
 #results-header{
-    font-size: 8vw;
+    font-size: 8vw !important;
     font-family:'Times New Roman', Times, serif;
 }
 #result-content{
@@ -312,3 +321,95 @@ header{
 #contact_3> a > img {
     width: 10%;
 }
+
+
+
+/*  -----------------------GALLERY CSS----------------------------------------------------*/
+
+#success-stories{
+    margin-top: 10%;
+    text-align: center;
+}
+#success-stories > h1{
+    margin-bottom: 7%;
+}
+#success-stories > div{
+    display: flex;
+    justify-content: center;
+    padding: 1.5vw;
+    margin-bottom: 8%;
+}
+
+#success-stories > div > div {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
+    place-items: center;
+    grid-template-areas: 
+        "i i t t t t";
+
+    width: 100%;
+    padding-top: 4%;
+    border-top: 3px solid black;
+}
+.success-image {
+    grid-area: i;
+    width: 100%;
+    height: auto;
+    display: flex; /*centers my image beter but dont understand why, im already placing items in center in te grid*/
+    justify-content: center;
+}
+.success-image > img {
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+}
+.success-story {
+    grid-area: t;
+    padding: 2vw;
+    text-align: left;
+    display: flex;
+    flex-direction: column; /*my story has a heading and a para so use flex to arrange*/
+    align-content: center;
+    justify-content: center;
+    margin-left: 10%;
+}
+.success-story > h3 {
+    font-size: 3vw;
+}
+#story3{
+    margin-bottom: 15% !important;
+}
+
+/*  -----------------------Nutrition CSS----------------------------------------------------*/
+
+
+/*  -----------------------subpage landing content CSS----------------------------------------------------*/
+#subpage-landing-content{
+    position:relative;
+    text-align: center;
+    align-content: center;
+    margin-bottom: 7%;
+}
+#subpage-landing-content-inside {
+    position:absolute;
+    color: whitesmoke;
+    top: 0%;
+    left:0%;
+}
+
+
+
+/*
+NOTES (myself):
+-> Relating to images and bounded items: 
+   o) always mention the width and height for proper dimensions
+   o
+
+-> Relating to alignments:
+   o) align-content: center;  vertical allign
+   o) justify-content: center; horizontal align
+
+-> Relating to rows and colums (grid/flex)
+   o) direction -> row -> vertical placing
+   o) direction -> column -> horizontal placing
+*/
