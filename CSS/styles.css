@@ -125,7 +125,7 @@ header{
 
 #landing-content{
     position:relative;
-    text-align: center;
+    text-align: left;
     align-content: center;
     margin-bottom: 7%;
 }
@@ -133,8 +133,8 @@ header{
     position:absolute;
     color:azure;
     top: 35%;
-    left:15%;
-    max-width: 30%;
+    left:10%;
+    max-width: 37%;
 }
 
 
