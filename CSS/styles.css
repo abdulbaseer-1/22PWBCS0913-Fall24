@@ -88,9 +88,9 @@ header{
 }
 #linkedin-icon{
     position: absolute;
-    top: 55%;
-    right: 3.2%;
-    width: 6%;
+    top: 58%;
+    right: 3.9%;
+    width: 4.5%;
 }
 #linkedin-icon:hover{
     transform: scale(1.1);
@@ -397,6 +397,114 @@ header{
     left:0%;
 }
 
+/*----------------------------Contact page CSS---------------------------*/
+
+.feedback-form {
+    max-width: 450px;
+    margin: 0 auto; /*as mentioned above for centering*/
+    padding: 2%;
+    background-color: rgba(136, 163, 198, 0.769);
+    border-radius: 20px;
+}
+.feedback-form > h2{
+    place-self: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input {
+    margin-bottom: 3%;
+}
+
+.form-input > label {
+    font-weight: bold;
+    margin-bottom: 0.7rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.2rem;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 7px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+button {
+    padding: 0.75rem;
+    border: none;
+    background-color: rgb(99, 135, 44);
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: green;
+}
+
+/*----------------------Workout Subpages CSS------------------------*/
+
+.subpage_workout_content {
+    max-width: 1000px;
+    margin: 0 auto; /*centering*/
+    padding: 2rem 1rem; /*top bottom , learned in class today*/
+    text-align: center;
+
+    padding: 1rem;
+    background-color: whitesmoke;
+    border-radius: 30px;
+}
+
+#workout_video {
+    margin-top: 10%;
+    margin-bottom: 2rem;
+    width: fit-content;
+    justify-self: center;
+}
+
+.workout_written {
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding: 1rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px; /*WHY DO pixels give better border radius for pictures and text borders?*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /*learned today in class*/
+}
+
+.subpage_workout_content > h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
+    border: 10px solid antiquewhite;
+    width: fit-content;
+    justify-self: center;
+    border-radius: 40px;
+}
+
+.workout_written > h3 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.workout_written > p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.workout_written > ul {
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.workout_written > ol {
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
 
 
 /*
@@ -410,6 +518,6 @@ NOTES (myself):
    o) justify-content: center; horizontal align
 
 -> Relating to rows and colums (grid/flex)
-   o) direction -> row -> vertical placing
-   o) direction -> column -> horizontal placing
+   o) direction -> column -> vertical placing
+   o) direction -> row -> horizontal placing
 */
