@@ -8,6 +8,18 @@
         <link rel="stylesheet" href="CSS/styles.css">
         <link rel="shortcut icon" href="images/header/favicon.ico" type="image/x-icon"> <!--favicon is the icon on the title , it is linked by rel here-->
         <title>EvoFit</title>
+
+        <style>
+            .content > section{
+                padding: 2rem;
+                background-color:rgba(218, 206, 206, 0.938);
+                margin: 0 auto;
+                width: 94%;
+                border-radius: 20px;
+                margin-bottom: 5%;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /*horizontal offset , vertical offset , blur radius , color */
+            }
+        </style>
     </head>
 
     <header>
@@ -31,83 +43,85 @@
             <img id="main-background" src="images/landing content/bg6.jpg" alt="Background main" width="100%" height="auto">
         </section>
 
-        <section id="Workouts" >
-            <div id="workout-header-container">
-                <h1 id="workout-header">Workouts</h1>
-            </div>
-            <div id="workout-grid-parent" align="center"> <!--this was needed to center the grid,-but whywasnt it working on #Workouts-->
-                <div id="workout-content-thumbnails">
-                    <div id="workout-thumbnail" >
-                        <a href="HTML Pages/Full_Body.html"><img id="thumbnail-1" src="images/thumbnails images/full body.jpg" alt="full body image" width="100%" height="auto"></a>
-                        <h4><a href="HTML Pages/Full_Body.html">Full Body</a></h4>
-                    </div>
-                    <div id="workout-thumbnail">
-                        <a href="HTML Pages/Biceps_Triceps.html"><img id="thumbnail-2" src="images/thumbnails images/biceps.jpg" alt="Biceps image" width="100%" height="auto"></a>
-                        <h4><a href="HTML Pages/Biceps_Triceps.html">Biceps & Triceps</a></h4>
-                    </div>
-                    <div id="workout-thumbnail">
-                        <a href="HTML Pages/Legs.html"><img id="thumbnail-3" src="images/thumbnails images/legs jay cutler.jpg" alt="Legs image" width="100%" height="auto"></a>
-                        <h4><a href="HTML Pages/Legs.html">Legs</a></h4>
-                    </div>
-                    <div id="workout-thumbnail">
-                        <a href="HTML Pages/Core.html"><img id="thumbnail-4" src="images/thumbnails images/core cubm.jpg" alt="Core image" width="100%" height="auto"></a>
-                        <h4><a href="HTML Pages/Core.html">Core</a></h4>
-                    </div>
-                    <div id="workout-thumbnail">
-                        <a href="HTML Pages/Back.html"><img id="thumbnail-5" src="images/thumbnails images/back ronnie.jpg" alt="Back image" width="100%" height="auto"></a>
-                        <h4><a href="HTML Pages/Back.html">Back</a></h4>
-                    </div>
-                    <div id="workout-thumbnail">
-                        <a href="HTML Pages/Cardio.html"><img id="thumbnail-6" src="images/thumbnails images/cardio.jpg" alt="Cardio image" width="100%" height="auto"></a>
-                        <h4><a href="HTML Pages/Cardio.html">Cardio</a></h4>
+        <div class="content">
+            <section id="Workouts" >
+                <div id="workout-header-container">
+                    <h1 id="workout-header">Workouts</h1>
+                </div>
+                <div id="workout-grid-parent" align="center"> <!--this was needed to center the grid,-but whywasnt it working on #Workouts-->
+                    <div id="workout-content-thumbnails">
+                        <div id="workout-thumbnail" >
+                            <a href="HTML Pages/Full_Body.html"><img id="thumbnail-1" src="images/thumbnails images/full body.jpg" alt="full body image" width="100%" height="auto"></a>
+                            <h4><a href="HTML Pages/Full_Body.html">Full Body</a></h4>
+                        </div>
+                        <div id="workout-thumbnail">
+                            <a href="HTML Pages/Biceps_Triceps.html"><img id="thumbnail-2" src="images/thumbnails images/biceps.jpg" alt="Biceps image" width="100%" height="auto"></a>
+                            <h4><a href="HTML Pages/Biceps_Triceps.html">Biceps & Triceps</a></h4>
+                        </div>
+                        <div id="workout-thumbnail">
+                            <a href="HTML Pages/Legs.html"><img id="thumbnail-3" src="images/thumbnails images/legs jay cutler.jpg" alt="Legs image" width="100%" height="auto"></a>
+                            <h4><a href="HTML Pages/Legs.html">Legs</a></h4>
+                        </div>
+                        <div id="workout-thumbnail">
+                            <a href="HTML Pages/Core.html"><img id="thumbnail-4" src="images/thumbnails images/core cubm.jpg" alt="Core image" width="100%" height="auto"></a>
+                            <h4><a href="HTML Pages/Core.html">Core</a></h4>
+                        </div>
+                        <div id="workout-thumbnail">
+                            <a href="HTML Pages/Back.html"><img id="thumbnail-5" src="images/thumbnails images/back ronnie.jpg" alt="Back image" width="100%" height="auto"></a>
+                            <h4><a href="HTML Pages/Back.html">Back</a></h4>
+                        </div>
+                        <div id="workout-thumbnail">
+                            <a href="HTML Pages/Cardio.html"><img id="thumbnail-6" src="images/thumbnails images/cardio.jpg" alt="Cardio image" width="100%" height="auto"></a>
+                            <h4><a href="HTML Pages/Cardio.html">Cardio</a></h4>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="Health-tips">
-            <div id="health-tips-header-container">
-                <h1 id="health-tips-header">Essential Tips</h1>
-            </div>
-            <div id="tips-content">
-                <div>
-                    <div id="tip-thumbnail-1">
-                        <a href="HTML Pages/Nutrition.html#plantar_faciitis"><img src="images/Health tips/plantar_Faciitis.jpg" alt="Plantar plantar Faciitis" width="100%" height="auto"></a>
-                    </div>
-                    <div id="tip-1-info">
-                        <h4 style="font-weight: bold;">Know the Cure for Plantar Faciitis</h4><br>
-                        <p>Plantar fasciitis is the inflammation of the plantar fascia, tissue in the foot used during walking and foot movement. Plantar fasciitis can be caused by a number of factors, including type of shoes, foot structure, overuse and types of walking surfaces. The main symptom of plantar fasciitis is heel pain.</p>
-                    </div>
-                </div>
-                
-                <div>
-                    <div id="tip-thumbnail-2">
-                        <a href="HTML Pages/Nutrition.html#lower_back_pain"><img src="images/Health tips/lower_back_pain.jpg" alt=" lower back pain" width="100%" height="auto"></a>
-                    </div>
-                    <div id="tip-2-info">
-                        <h4 style="font-weight: bold;">Say GoodBye to Lower Back Pain</h4><br>
-                        <p>The gluteus medius is sandwiched between the glute maximus and minimus and lies in and around the hip area.  The role of the muscle is to abduct your hip or lift your leg out to the side in either standing or side lying and to keep your pelvis level whenever you take a step.  Prolonged sitting during the day as well as an unequal weight distribution when standing are two of the most common reasons for this muscle to get weak and imbalanced.</p>
-                    </div>
-                </div>
-            </div>                            
             </section>
-
-        <section id="Results" >
-            <div id="results-header-container">
-                <h1 id="results-header">Results</h1>
-            </div>
-
-            <div id="result-content">
-                <div id="result-1">
-                    <h2>The Results Speak for Themselves</h2><br>
-                    <p>At Fitness Evolution, we believe that every journey tells a story—and our results speak volumes! Just like the powerful transformations shared by our community, your success is just around the corner. With tailored workout plans and expert health tips, we empower real people to achieve real results. Whether you’re a beginner or a fitness enthusiast, our diverse range of success stories showcases the incredible potential within you. Join us today and start your journey to a healthier, stronger you!</p>
+    
+            <section id="Health-tips">
+                <div id="health-tips-header-container">
+                    <h1 id="health-tips-header">Essential Tips</h1>
                 </div>
-                <div id="result-2">
-                    <img id="image1_1" src="images/body transformations/image15remake-removebg-preview.png" alt="Background main" width="100%" height="auto" ><br> <!--width and height of container referred here-->
+                <div id="tips-content">
+                    <div>
+                        <div id="tip-thumbnail-1">
+                            <a href="HTML Pages/Nutrition.html#plantar_faciitis"><img src="images/Health tips/plantar_Faciitis.jpg" alt="Plantar plantar Faciitis" width="100%" height="auto"></a>
+                        </div>
+                        <div id="tip-1-info">
+                            <h4 style="font-weight: bold;">Know the Cure for Plantar Faciitis</h4><br>
+                            <p>Plantar fasciitis is the inflammation of the plantar fascia, tissue in the foot used during walking and foot movement. Plantar fasciitis can be caused by a number of factors, including type of shoes, foot structure, overuse and types of walking surfaces. The main symptom of plantar fasciitis is heel pain.</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div id="tip-thumbnail-2">
+                            <a href="HTML Pages/Nutrition.html#lower_back_pain"><img src="images/Health tips/lower_back_pain.jpg" alt=" lower back pain" width="100%" height="auto"></a>
+                        </div>
+                        <div id="tip-2-info">
+                            <h4 style="font-weight: bold;">Say GoodBye to Lower Back Pain</h4><br>
+                            <p>The gluteus medius is sandwiched between the glute maximus and minimus and lies in and around the hip area.  The role of the muscle is to abduct your hip or lift your leg out to the side in either standing or side lying and to keep your pelvis level whenever you take a step.  Prolonged sitting during the day as well as an unequal weight distribution when standing are two of the most common reasons for this muscle to get weak and imbalanced.</p>
+                        </div>
+                    </div>
+                </div>                            
+                </section>
+    
+            <section id="Results" >
+                <div id="results-header-container">
+                    <h1 id="results-header">Results</h1>
                 </div>
-            </div>
-
-        </section>
+    
+                <div id="result-content">
+                    <div id="result-1">
+                        <h2>The Results Speak for Themselves</h2><br>
+                        <p>At Fitness Evolution, we believe that every journey tells a story—and our results speak volumes! Just like the powerful transformations shared by our community, your success is just around the corner. With tailored workout plans and expert health tips, we empower real people to achieve real results. Whether you’re a beginner or a fitness enthusiast, our diverse range of success stories showcases the incredible potential within you. Join us today and start your journey to a healthier, stronger you!</p>
+                    </div>
+                    <div id="result-2">
+                        <img id="image1_1" src="images/body transformations/image15remake-removebg-preview.png" alt="Background main" width="100%" height="auto" ><br> <!--width and height of container referred here-->
+                    </div>
+                </div>
+    
+            </section>
+        </div>
     </body>
 
     <footer id="Contact">
