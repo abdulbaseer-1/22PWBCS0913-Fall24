@@ -460,9 +460,21 @@ button:hover {
 
 #workout_video {
     margin-top: 10%;
-    margin-bottom: 2rem;
-    width: fit-content;
-    justify-self: center;
+    width: 90%;
+    position: relative;
+    padding-bottom: 56.35%; /*help taken from online sources in iframe adjustment*/
+    height: 0; /*height adjustment is not going smoothly so the trick is
+               to just position the video frame and then adjust the height of the video
+                at that position*/
+}
+
+#workout_video > iframe {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
 }
 
 .workout_written {
@@ -476,12 +488,9 @@ button:hover {
 }
 
 .subpage_workout_content > h1 {
-    font-size: 4.5rem;
+    font-size: 7vw; /*rem is not resizing properly so using %*/
     margin-bottom: 1.5rem;
-    border: 10px solid antiquewhite;
-    width: fit-content;
     justify-self: center;
-    border-radius: 40px;
 }
 
 .workout_written > h3 {
