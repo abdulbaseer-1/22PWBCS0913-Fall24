@@ -7,6 +7,27 @@
         <link rel="stylesheet" href="../CSS/styles.css">
         <link rel="shortcut icon" href="../images/header/favicon.ico" type="image/x-icon"> <!--favicon is the icon on the title , it is linked by rel here-->
         <title>EvoFit</title>
+
+        <style>
+            .top-content{
+                position: relative;
+            }
+            .subpage_workout_content_navigation > #navigation {
+                position: absolute;
+                top: 103%;
+            }
+            .subpage_workout_content_navigation > #navigation > a {
+                padding: 1.5%;
+                text-wrap: nowrap;
+                background-color: rgba(255, 230, 198, 0.169);
+            }
+            .subpage_workout_content_navigation > #navigation > a:hover {
+                background-color: rgb(201, 6, 6);
+                border-radius: 40px;
+                text-wrap: nowrap;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            }
+        </style>
     </head>
 
     <header>
@@ -25,16 +46,28 @@
     </header>
 
     <body>
-        <section id="subpage-landing-content" style="border-top: 5px solid black; margin-bottom: 10%;">
-            <img id="subpage-main-background" src="../images/thumbnails images/biceps.jpg" alt="Background main" width="100%" height="auto">
-            
-            <div id="subpage-landing-content-inside" style="top: 25%;">
-                <div id="result-content" style="color: whitesmoke;">
-                    <h2>Your Stronger Self Starts Here</h2><br>
-                    <p>Unlock your potential with workouts designed to challenge and transform you. Whether you're just starting out or leveling up, these routines will help you build strength, endurance, and confidence. Let’s make every workout count toward the best version of you!</p>
+        <div class="top-content">
+            <section id="subpage-landing-content" style="border-top: 5px solid black; margin-bottom: 10%;">
+                <img id="subpage-main-background" src="../images/thumbnails images/biceps.jpg" alt="Background main" width="100%" height="auto">
+                
+                <div id="subpage-landing-content-inside" style="top: 25%;">
+                    <div id="result-content" style="color: whitesmoke;">
+                        <h2>Your Stronger Self Starts Here</h2><br>
+                        <p>Unlock your potential with workouts designed to challenge and transform you. Whether you're just starting out or leveling up, these routines will help you build strength, endurance, and confidence. Let’s make every workout count toward the best version of you!</p>
+                    </div>
                 </div>
-            </div>
-        </section>   
+            </section>
+    
+            <section class="subpage_workout_content_navigation">
+                <nav id="navigation">
+                    <a href="Full_Body.html">Full Body Workout</a>
+                    <a href="Legs.html"> Legs Workout</a>
+                    <a href="Core.html"> Core Workout</a>
+                    <a href="Back.html"> Back Workout</a>
+                    <a href="Cardio.html"> Cardio Workout</a>
+                </nav>
+            </section>
+        </div>
 
         <section class="subpage_workout_content">
             <h1>Biceps & Triceps Workout</h1>
