@@ -27,7 +27,8 @@
     <body>
         <div class="feedback-form">
             <h2>Feedback</h2><br><br>
-            <form action="reply.html" method="get"> <!--github pages isnt supporting serverside so i cant do post-->
+            <!--the prevent default and widow.location.href methods were learned from chatgpt but the way i did it was learned while learning sdl2 in c++ for game dev(months ago)-->
+            <form onsubmit="event.preventDefault(); window.location.href='reply.html';"> <!--(action="reply.html" method="get")   github pages isnt supporting serverside so i cant do methods etc-->
                 <div class="form-input">
                     <label for="name">User Name</label>
                     <input type="text" name="name" id="name" placeholder="Username" required>
